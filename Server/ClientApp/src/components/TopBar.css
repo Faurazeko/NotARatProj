@@ -1,0 +1,38 @@
+﻿.top-bar {
+    background: var(--topbar);
+    color: var(--topbar-txt) !important;
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    position: fixed;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+    .top-bar > .container-fluid > span {
+        vertical-align: middle;
+    }
+
+    .top-bar > .container-fluid {
+        align-items: center;
+        height: 50px;
+        display: flex;
+    }
+
+.right {
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.logo {
+    cursor: pointer;
+    color: var(--fg2) !important;
+}
+
+    .logo:hover {
+        color: var(--blue) !important;
+    }

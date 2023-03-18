@@ -1,0 +1,28 @@
+﻿.main-window{
+    box-sizing:content-box;
+    width:80%;
+}
+
+.side-window {
+    box-sizing: content-box;
+    width: 20%;
+}
+
+.stream-container{
+    display:flex;
+}
+
+.stream-window{
+    aspect-ratio: 16 / 9;
+    width:100%;
+    background-color:var(--alt-bg1);
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.stream-text{
+    text-align:center;
+    font-size:9rem;
+}

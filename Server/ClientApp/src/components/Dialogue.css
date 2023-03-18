@@ -1,0 +1,110 @@
+﻿.dialogue-panel {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1337;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .dialogue-panel.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+.dialogue-window {
+    min-width:35vw;
+    width: 35vw;
+    max-width:35vw;
+    background-color: var(--bg2);
+    border-top: 0.2em solid var(--blue);
+    border-radius: 0px 0px 5px 5px;
+    padding: 0.5em;
+    position:relative;
+    overflow-wrap:break-word;
+}
+
+    .dialogue-window > .title {
+        text-align: center;
+        font-size: 2em;
+        color: var(--fg1);
+        margin-bottom: 0;
+    }
+
+    .dialogue-window > .sub-title {
+        text-align: center;
+        font-size: 1.4em;
+        color: var(--grey);
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    .dialogue-window > .btns-box{
+        display:flex;
+        flex-flow:row wrap;
+        width:100%;
+        justify-content:space-around;
+    }
+
+.dialogue-btn {
+    flex-grow: 1;
+    margin: 0 1em 0.5em 1em !important;
+}
+
+.dialogue-window > .close {
+    cursor: pointer;
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+    .dialogue-window > .close::before,
+    .dialogue-window > .close::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 0.12em;
+        background-color: white;
+        transition: 0.25s;
+    }
+
+    .dialogue-window > .close::before {
+        transform: rotate(45deg);
+    }
+
+    .dialogue-window > .close::after {
+        transform: rotate(-45deg)
+    }
+
+    .dialogue-window > .close:hover::before,
+    .dialogue-window > .close:hover::after {
+        background-color: var(--red);
+        transition: 0.25s;
+    }
+
+.text-field {
+    overflow-y: scroll;
+    min-height: 8em;
+    height: 8em;
+    max-height: 8em;
+    background-color: var(--alt-bg1);
+    color:var(--grey);
+    margin: 1em;
+    padding: 0.5em;
+    outline:none;
+    padding: 0.3em 0.7em 0.5em 0.7em;
+    border: 0.15em solid var(--blue-dark);
+    border-radius: 6px;
+}
+
+    .text-field:focus {
+        border-color: var(--blue);
+        color: var(--fg1);
+    }

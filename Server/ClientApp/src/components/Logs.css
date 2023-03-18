@@ -1,0 +1,39 @@
+﻿.logs-header-box {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+    .row-flex > * {
+        padding-right: 1em;
+    }
+
+.logs-element {
+    width: 100%;
+    background-color: var(--bg2);
+    margin-top: 0.5em;
+    padding: 0.5em;
+    position: relative;
+}
+
+.logs-number {
+    color: var(--grey);
+    font-size: 1.25em;
+}
+
+.log-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 2em;
+}
+
+.log-line-value {
+    font-family: monospace;
+    margin-left: 0.25em;
+}

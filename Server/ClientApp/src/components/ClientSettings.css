@@ -1,0 +1,151 @@
+﻿.client-settings-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    position: absolute;
+    z-index: 1;
+}
+
+.client-settings-header {
+    height: 10rem;
+    position: relative;
+}
+
+.client-settings-header-container {
+    height: 100%;
+    z-index: 2;
+    width: 100%;
+    position: relative;
+    display: flex;
+    /*justify-content:center;*/
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+    .client-settings-header-container > * {
+        width: 100%;
+    }
+
+.online-container {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.client-back-btn {
+    position: absolute;
+    z-index: 3;
+    font-size: 2rem;
+    left: 0.3rem;
+    top: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 var(--blue);
+    -webkit-text-stroke: 0.1rem;
+    outline: none;
+}
+
+    .client-back-btn:hover, .client-back-btn:focus {
+        filter: none;
+    }
+
+.client-btns-conrainer {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 2rem;
+}
+
+.icon-expand {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.1;
+    cursor: pointer;
+    background:none;
+    outline:none;       
+}
+
+    .icon-expand:before {
+        content: "";
+        background-color: var(--red);
+        width: 0%;
+        height: 0%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        transition: 0.5s;   
+        vertical-align: middle;
+        margin-left: 50%;
+        margin-top: 50%;
+        opacity: 0.85;
+    }
+
+    .icon-expand:hover{
+        filter: none;
+    }
+
+    .icon-expand:hover:before, .icon-expand:focus:before {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        margin-top: 0;
+        margin-left: 0;
+        filter: none !important;
+    }
+
+.client-btns-conrainer > * {
+    padding: 0 1rem;
+}
+
+.client-back-btn:hover, .client-back-btn:focus {
+    box-shadow: inset 0 0 0 1em var(--blue);
+    transition: 0.75s;
+}
+
+.client-settings-box {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.info-box {
+    width: 50%;
+    box-sizing: content-box;
+}
+
+.btns-box {
+    width: 50%;
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:start;
+    height:0;
+}
+
+    .btns-box > button {
+        margin: 0.5rem;
+    }

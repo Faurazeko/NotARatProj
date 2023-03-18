@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+* {
+	transition: 0.3s;
+	scroll-behavior: smooth;
+	color-scheme: dark !important;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+	--topbar: #111111;
+	--topbar-txt: #ffffff;
+	--bg1: #1E1E1E;
+	--bg2: #282828;
+	--fg1: #fff;
+	--fg2: rgba(255,255,255,0.85);
+	--alt-bg1: #383838;
+	--alt-bg2: #545454;
+	--alt-fg1: rgba(194,194,194,0.5);
+	--alt-fg2: #e1e1e1;
+	--yellow: #DED142;
+	--orange: #E68D37;
+	--red: #CE2929;
+	--magenta: #C006C7;
+	--violet: #7617D8;
+	--blue: #0095D5;
+	--blue-dark: #006895;
+	--cyan: #00d0d6;
+	--green: #71BF44;
+	--primary: var(--blue);
+	--yellow-txt: #333333;
+	--orange-txt: #ffffff;
+	--red-txt: #ffffff;
+	--magenta-txt: #ffffff;
+	--violet-txt: #ffffff;
+	--blue-txt: #ffffff;
+	--cyan-txt: #ffffff;
+	--green-txt: #ffffff;
+	--black: #000000;
+	--white: #ffffff;
+	--grey: #989898;
+	--primary-txt: #ffffff;
+	--accent-txt: #ffffff;
+	--highlight: #ffffff;
+	--lines: var(--dark-theme-lines);
+	--contrast-darker: hsl(0, 0%, 10.7%);
+	--contrast-darkest: hsl(0, 0%, 5.699999999999999%);
+	--contrast-lighter: hsl(0, 0%, 20.7%);
+	--contrast-lightest: hsl(0, 0%, 25.7%);
+	--toggle_pw_display_prop: inline;
+}
+
+h1, h2, h3, h4, h5, h6, p, span{
+	color: var(--fg2);
+}
+
+a{
+	text-decoration:none;
+	color: var(--blue);
+	outline:none;
+}
+
+a:hover{
+	color: var(--blue-dark)
+}
+
+	a:focus {
+		color: var(--blue) !important;
+		filter:brightness(80%);
+	}
+
+html, body, #root, .main-content, .one-hundred-percent, #root > div {
+	width: 100% !important;
+	max-width: 100% !important;
+	min-width: 100% !important;
+	min-height: 100% !important;
+}
+
+body{
+	height:100vh;
+}
+
+html, body {
+	transition: 0s !important;
+}
+
+.disabled-text{
+	color:var(--grey);
+}
+
+.status-circle-corner {
+	bottom: 0.5em;
+	right: 0.5em;
+	position: absolute;
+}
+
+.status-circle {
+	width: 1.5rem;
+	height: 1.5rem;
+	background: var(--red);
+	opacity: 0.8;
+	border-radius: 50%;
+}
+
+.status-circle-online {
+	background: var(--green);
+}
+
+.center-vertically {
+	vertical-align: middle;
+}
+
+.main-content {
+	padding-top: 50px;
+	min-width:100% !important;
+	min-height:100% !important;
+	background: var(--bg1) !important;
+	color: var(--fg1) !important;
+}
+
+.wrapper {
+	background: inherit;
+	color: inherit;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+	.wrapper > .item {
+		width: 540px;
+		height: 400px;
+		background: var(--bg2);
+		border-radius: 6px;
+		position:relative;
+		z-index:1;
+	}
+
+		.wrapper > .item > .item-image-container {
+			z-index: -1;
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 45%;
+			overflow: hidden;
+			border-radius: 6px 0 0 6px;
+		}
+			.wrapper > .item > .item-image-container > .item-image {
+				z-index: -1;
+				position: absolute;
+				height:100%;
+				left: -55%;
+			}
+
+			.wrapper > .item > .item-image-container > .item-title {
+				z-index: 1;
+				width: 100%;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				background: rgba(30, 30, 30, 0.8);
+				position:absolute;
+				top:0;
+			}
+
+		.wrapper > .item > .content {
+			width: 55%;
+			position: absolute;
+			right: 0;
+			height: 100%;
+			display: flex;
+			flex-flow: column wrap;
+			flex:1;
+		}
+
+			.wrapper > .item > .content > .control-panel {
+				margin-top: auto;
+				flex-flow: row-reverse wrap;
+			}
+
+
+.text-dng{
+	color:var(--red);
+}
+
+.text-succ{
+	color:var(--green);
+}
+
+.text-p{
+	color:var(--blue);
+}
+
+.p-spinner {
+	color: var(--blue);
+	width:10rem;
+	height:10rem;
+	font-size:4rem;
+}
+
+
+button {
+	background-color: var(--blue);
+	color: #fff !important;
+	border: none;
+	padding: 0.25em 1em 0.25em 1em;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: 600;
+	box-sizing: border-box !important;
+	border: 0.2em solid transparent;
+	box-sizing: border-box !important;
+	position: relative;
+	overflow: hidden;
+}
+
+	button:before {
+		box-sizing: border-box;
+	}
+
+	button:hover {
+		filter: brightness(90%);
+	}
+
+	button:focus {
+		filter:brightness(80%);
+	}
+
+button.danger{
+	background-color:var(--red);
+	color:var(--red-txt);
+}
+
+button.danger.outline{
+	background-color:transparent;
+	border: 0.125em solid var(--red);
+	color: var(--red) !important;
+}
+
+	button.danger.outline:hover {
+		background-color: var(--red);
+		color: var(--red-txt) !important;
+	}
+
+	button.danger.outline:focus {
+		background-color: var(--red);
+		color: var(--red-txt) !important;
+		filter: brightness(80%);
+	}
+
+	button.secondary {
+		background-color: transparent;
+		border: 0.125em solid var(--grey);
+		color: var(--blue) !important;
+	}
+
+		button.secondary:hover {
+			border-color: var(--blue);
+			background-color: var(--blue);
+			color:var(--blue-txt) !important;
+		}
+
+
+
+.one-hundred-percent {
+	width: 100% !important;
+	min-width: 100% !important;
+	height: 100% !important;
+	min-height: 100% !important;
+}
+
+@media screen and (max-width: 800px){
+
+}
+
+.object {
+	background-color: var(--bg2);
+/*	border-radius: 10px;
+	padding: 0.6rem;*/
+}
+
+
+
+
+
+
+.my-form {
+	font-size: 1.2rem;
+	font-weight: bold;
+	line-height: 1.1;
+	display: grid;
+	grid-template-columns: 1em auto;
+	gap: 0.5em;
+	background:inherit;
+	color:var(--fg1);
+	border: none !important;
+}
+
+.my-form--disabled {
+	color: var(--grey);
+	cursor: not-allowed;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+	font: inherit;
+	color: currentColor;
+	width: 1.15em;
+	height: 1.15em;
+	border: 0.15em solid currentColor;
+	border-radius: 0.15em;
+	transform: translateY(-0.075em);
+	display: grid;
+	place-content: center;
+}
+
+	input[type="checkbox"]::before {
+		content: "";
+		width: 0.65em;
+		height: 0.65em;
+		clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+		transform: scale(0);
+		transform-origin: bottom left;
+		transition: 120ms transform ease-in-out;
+		box-shadow: inset 1em 1em var(--form-control-color);
+		background-color: var(--blue);
+	}
+
+	input[type="checkbox"]:checked::before {
+		transform: scale(1);
+	}
+
+	input[type="checkbox"]:focus {
+/*		outline: max(2px, 0.15em) solid currentColor;
+		outline-offset: max(2px, 0.15em);*/
+		color:var(--blue);
+	}
+
+	input[type="checkbox"]:disabled {
+		color: var(--grey);
+		cursor: not-allowed;
+	}
